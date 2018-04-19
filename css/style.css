@@ -1,0 +1,354 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", serif;
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 400;
+  color: #545454;
+  background-color: rgb(250, 250, 250);
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.wrapper-brown, .main-footer {
+  background-color: rgb(52, 38, 29);
+}
+
+.wrapper-brown {
+  padding-bottom: 269px;
+}
+
+.main-header {
+  outline: 1px solid yellow;
+  padding-top: 60px;
+  min-height: 47px;
+}
+.header-index {
+  margin-bottom: 250px;
+}
+
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo {
+  outline: 1px solid blue;
+  min-height: 47px;
+  width: 200px;
+}
+
+.header-logo p {
+  margin: 0;
+  padding: 0;
+}
+
+.site-navigation {
+  outline: 1px solid green;
+  min-height: 47px;
+  width: 570px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.logo-name {
+  color: #f1cdb3;
+  font-size: 32px;
+  line-height: 57px;
+  margin: 0;
+}
+
+.logo-description {
+  font-family: "Arial", sans-serif;
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 29px;
+}
+
+.site-navigation a {
+  font-family: "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 29px;
+  color: #cdcdcd;
+}
+
+.promo {
+  outline: 1px solid yellow;
+  min-height: 295px;
+  width: 470px;
+}
+
+.promo-title {
+  color: #ffffff;
+  font-size: 44px;
+  line-height: 57px;
+  font-weight: 400;
+}
+
+.promo-description {
+  font-family: "Arial", sans-serif;
+  color: #cdcdcd;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.btn {
+  color: #292929;
+  font-size: 17px;
+  line-height: 57px;
+  text-align: center;
+}
+
+.btn:hover, .bth:focus {
+  background-color: rgb(253, 220, 196);
+}
+
+.promo-btn, .pets-btn {
+  background-color: rgb(253, 220, 196);
+}
+
+.about-title,
+.pets-title,
+.help-title,
+.donation-proposal {
+  font-family: Georgia;
+  color:  #545454;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45px;
+  text-align: center;
+}
+
+.about {
+  padding: 120px 0;
+}
+
+.about h2 {
+  margin: 0;
+  text-align: left;
+}
+
+.about h2, .about p {
+  margin-left: 585px;
+}
+
+.about-description {
+  font-family: "Arial", sans-serif;
+  color:  #4c4c4c;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.pets, .donation {
+  background-color: rgb(246, 246, 246);
+}
+
+.pets {
+  padding-top: 73px;
+  padding-bottom: 68px;
+}
+
+.pets h2 {
+  margin-bottom: 60px;
+}
+
+.pets-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.pets-item {
+  outline: 1px solid red;
+  min-height: 424px;
+  width: 270px;
+  margin-bottom: 35px;
+}
+
+.pets-item-title {
+  font-size: 20px;
+  line-height: 45px;
+  text-align: center;
+}
+
+.pets-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+.help-direction {
+  padding-top: 68px;
+  padding-bottom: 77px;
+}
+
+.help-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.help-item {
+  font-size: 20px;
+  line-height: 45px;
+  text-align: center;
+  outline: 1px solid green;
+  width: 185px;
+  margin-top: 160px;
+  margin-left: 23px;
+  margin-right: 23px;
+}
+
+.donation {
+  padding-top: 68px;
+  padding-bottom: 85px;
+}
+
+.donation h2, .donation p {
+  margin-left: 585px;
+}
+
+.donation-card-title {
+  font-size: 15px;
+}
+
+.donation-card-number {
+  font-family: "Times New Roman", serif;
+  color:  #292929;
+  font-size: 20px;
+  line-height: 45px;
+  background-color: rgb(253, 220, 196);
+}
+
+.donation-explanation {
+  font-family: "Arial", sans-serif;
+  color:  #b2b2b2;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 18px;
+}
+
+.main-footer {
+  padding-top: 70px;
+  padding-bottom: 75px;
+}
+
+.main-footer .container {
+  display: flex;
+}
+
+.contacts {
+  min-height: 215px;
+  outline: 1px solid yellow;
+  width: 300px;
+  margin-right: 150px;
+}
+
+.adress {
+  min-height: 215px;
+  outline: 1px solid yellow;
+  width: 320px;
+}
+
+.contacts-title,
+.adress-title {
+  color: #ffffff;
+}
+
+.contacts span,
+.adress-list li {
+  font-family: "Times New Roman", serif;
+  color:  #f1cdb3;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.adress-list {
+  list-style: none;
+  margin: 0;
+}
+
+.wrapper-inner {
+  background-color: #fafafa;
+}
+
+.wrapper-inner .logo-name {
+  color: #545454;
+}
+
+.wrapper-inner .logo-description {
+  color: #292929;
+}
+
+.wrapper-inner a {
+  color: #545454;
+}
+
+.paginator {
+  list-style: none;
+}
+
+.paginator a {
+  font-family: "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 57px;
+  color: #292929;
+}
+
+.popup-pets-title {
+  font-size: 35px;
+  line-height: 45px;
+  color: #545454;
+}
+
+.popup-breed {
+  font-size: 20px;
+  line-height: 34px;
+  color: #545454;
+}
+
+.popup-description {
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  color: #4c4c4c;
+}
+
+.popup-pets-list {
+  font-family: "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 34px;
+  color: #545454;
+}
+
+.popup-pets-list  b {
+  font-family: "Georgia", serif;
+  font-size: 17px;
+  line-height: 34px;
+  color: #545454;
+  font-weight: 400;
+}
