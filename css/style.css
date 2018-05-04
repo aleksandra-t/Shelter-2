@@ -13,13 +13,22 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
   clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(100%);
+  overflow: hidden;
 }
 
 .container {
@@ -28,12 +37,9 @@ a {
   padding: 0 10px;
 }
 
-.wrapper-brown, .main-footer {
-  background-color: rgb(52, 38, 29);
-}
-
 .wrapper-brown {
-  padding-bottom: 269px;
+  background: #2a2321 url("../img/background-header.jpg") no-repeat top center;
+  padding-bottom: 237px;
 }
 
 .main-header {
@@ -62,18 +68,21 @@ a {
 }
 
 .site-navigation {
-  outline: 1px solid green;
   min-height: 47px;
   width: 570px;
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo-name {
   color: #f1cdb3;
   font-size: 32px;
-  line-height: 57px;
+  line-height: 38px;
   margin: 0;
 }
 
@@ -82,6 +91,7 @@ a {
   color: #ffffff;
   font-size: 13px;
   line-height: 29px;
+  letter-spacing: 0.6px;
 }
 
 .site-navigation a {
@@ -89,19 +99,34 @@ a {
   font-size: 15px;
   line-height: 29px;
   color: #cdcdcd;
+  display: block;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  box-shadow: 0px 3px #f1cdb3;
+}
+
+.site-navigation a:focus {
+  outline: none;
 }
 
 .promo {
   outline: 1px solid yellow;
   min-height: 295px;
-  width: 470px;
+  width: 455px;
 }
 
 .promo-title {
+  margin: 0;
+  padding: 0;
   color: #ffffff;
   font-size: 44px;
   line-height: 57px;
   font-weight: 400;
+  width: 350px;
+  display: block;
+  margin-bottom: 34px
 }
 
 .promo-description {
@@ -109,21 +134,32 @@ a {
   color: #cdcdcd;
   font-size: 15px;
   line-height: 24px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 39px;
 }
 
 .btn {
   color: #292929;
   font-size: 17px;
-  line-height: 57px;
   text-align: center;
+  display: inline-block;
+  padding-left: 44px;
+  padding-right: 44px;
+  border-radius: 25px;
+  cursor: pointer;
 }
 
 .btn:hover, .bth:focus {
   background-color: rgb(253, 220, 196);
 }
 
+.btn:focus {
+  outline: none;
+}
+
 .promo-btn, .pets-btn {
-  background-color: rgb(253, 220, 196);
+  background-color: #f1cdb3;
 }
 
 .about-title,
@@ -139,15 +175,30 @@ a {
 }
 
 .about {
-  padding: 120px 0;
+  padding: 100px 0;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.about::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 408px;
+  background: url("../img/pets.jpg") no-repeat;
+  top: 90px;
+  left: 340px;
 }
 
 .about h2 {
   margin: 0;
   text-align: left;
+  width: 315px;
+  margin-bottom: 27px;
 }
 
 .about h2, .about p {
+  padding: 0;
   margin-left: 585px;
 }
 
@@ -156,6 +207,9 @@ a {
   color:  #4c4c4c;
   font-size: 15px;
   line-height: 24px;
+  margin: 0;
+  width: 430px;
+  margin-bottom: 25px;
 }
 
 .pets, .donation {
@@ -165,10 +219,14 @@ a {
 .pets {
   padding-top: 73px;
   padding-bottom: 68px;
+  text-align: center;
 }
 
 .pets h2 {
+  margin: 0 auto;
+  padding: 0;
   margin-bottom: 60px;
+
 }
 
 .pets-list {
@@ -181,26 +239,44 @@ a {
 }
 
 .pets-item {
-  outline: 1px solid red;
   min-height: 424px;
   width: 270px;
   margin-bottom: 35px;
+  background: #fafafa;
+}
+
+.pets-item img {
+  border-radius: 5px;
 }
 
 .pets-item-title {
   font-size: 20px;
   line-height: 45px;
   text-align: center;
+  font-weight: 400;
+  margin: 0;
+}
+
+.pets-item-btn {
+  border: 2px solid #f1cdb3;
+}
+
+.pets-item-btn:hover {
+  background-color: #f1cdb3;
 }
 
 .pets-btn {
-  display: block;
-  margin: 0 auto;
+  background-color: #f1cdb3;
 }
 
 .help-direction {
   padding-top: 68px;
   padding-bottom: 77px;
+}
+
+.help-title {
+  margin: 0;
+  padding: 0;
 }
 
 .help-list {
@@ -210,6 +286,7 @@ a {
   list-style: none;
   flex-wrap: wrap;
   justify-content: center;
+
 }
 
 .help-item {
@@ -229,7 +306,10 @@ a {
 }
 
 .donation h2, .donation p {
+  margin: 0;
   margin-left: 585px;
+  padding: 0;
+  text-align: left;
 }
 
 .donation-card-title {
@@ -277,6 +357,8 @@ a {
 .contacts-title,
 .adress-title {
   color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
 .contacts span,
@@ -290,6 +372,7 @@ a {
 .adress-list {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 .wrapper-inner {
