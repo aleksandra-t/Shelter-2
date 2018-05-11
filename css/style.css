@@ -39,12 +39,12 @@ img {
 
 .wrapper-brown {
   background: #2a2321 url("../img/background-header.jpg") no-repeat top center;
-  padding-bottom: 237px;
+  padding-bottom: 212px;
 }
 
 .main-header {
-  outline: 1px solid yellow;
   padding-top: 60px;
+  padding-bottom: 25px;
   min-height: 47px;
 }
 .header-index {
@@ -57,7 +57,6 @@ img {
 }
 
 .header-logo {
-  outline: 1px solid blue;
   min-height: 47px;
   width: 200px;
 }
@@ -103,7 +102,8 @@ img {
 }
 
 .site-navigation a:hover,
-.site-navigation a:focus {
+.site-navigation a:focus,
+.site-navigation .active {
   box-shadow: 0px 3px #f1cdb3;
 }
 
@@ -112,7 +112,6 @@ img {
 }
 
 .promo {
-  outline: 1px solid yellow;
   min-height: 295px;
   width: 455px;
 }
@@ -150,12 +149,14 @@ img {
   cursor: pointer;
 }
 
-.btn:hover, .bth:focus {
-  background-color: rgb(253, 220, 196);
+.btn:hover {
+  background-color: #f7ddca;
 }
 
-.btn:focus {
+.promo-btn:focus, .pets-btn:focus {
   outline: none;
+  background-color: #ffffff;
+  box-shadow: inset 0px 0px 0px 4px #f7ddca;
 }
 
 .promo-btn, .pets-btn {
@@ -255,6 +256,7 @@ img {
   text-align: center;
   font-weight: 400;
   margin: 0;
+  color: #545454;
 }
 
 .pets-item-btn {
@@ -262,6 +264,11 @@ img {
 }
 
 .pets-item-btn:hover {
+  background-color: #f1cdb3;
+}
+
+.pets-item-btn:focus {
+  outline: none;
   background-color: #f1cdb3;
 }
 
@@ -293,16 +300,84 @@ img {
   font-size: 20px;
   line-height: 45px;
   text-align: center;
-  outline: 1px solid green;
   width: 185px;
   margin-top: 160px;
   margin-left: 23px;
   margin-right: 23px;
+  position: relative;
 }
+
+.help-item::before {
+  content:"";
+  position: absolute;
+
+  width: 100px;
+  height: 90px;
+
+  bottom: 45px;
+  left: 50%;
+
+  margin-left: -50px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.help-item:first-child::before {
+  background-image: url("../img/food.svg");
+}
+
+.help-item:nth-child(2)::before {
+  background-image: url("../img/transportation.svg");
+}
+
+.help-item:nth-child(3)::before {
+  background-image: url("../img/toys.svg");
+}
+
+.help-item:nth-child(4)::before {
+  background-image: url("../img/bowl.svg");
+}
+
+.help-item:nth-child(5)::before {
+  background-image: url("../img/shampoo.svg");
+}
+
+.help-item:nth-child(6)::before {
+  background-image: url("../img/vitamins.svg");
+}
+
+.help-item:nth-child(7)::before {
+  background-image: url("../img/medicines.svg");
+}
+
+.help-item:nth-child(8)::before {
+  background-image: url("../img/collars.svg");
+}
+
+.help-item:nth-child(9)::before {
+  background-image: url("../img/sleeping.svg");
+}
+
 
 .donation {
   padding-top: 68px;
   padding-bottom: 85px;
+
+}
+
+.donation .container {
+  position: relative;
+}
+
+.donation .container::before {
+  content: "";
+  position: absolute;
+  width: 505px;
+  height: 261px;
+  left: 0;
+  top: 0;
+  background-image: url("../img/donation.jpg");
 }
 
 .donation h2, .donation p {
@@ -312,16 +387,37 @@ img {
   text-align: left;
 }
 
+.donation-proposal {
+  width: 360px;
+  margin-bottom: 30px;
+}
+
 .donation-card-title {
   font-size: 15px;
 }
 
-.donation-card-number {
+p.donation-card-number {
   font-family: "Times New Roman", serif;
   color:  #292929;
   font-size: 20px;
   line-height: 45px;
   background-color: rgb(253, 220, 196);
+  width: 285px;
+  box-sizing: border-box;
+  padding-left: 55px;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+p.donation-card-number::before {
+  content: "";
+  position: absolute;
+  width: 34px;
+  height: 26px;
+  background: url("../img/credit-card.svg") no-repeat center;
+  top: 10px;
+  left: 10px;
 }
 
 .donation-explanation {
@@ -330,11 +426,13 @@ img {
   font-size: 12px;
   font-style: italic;
   line-height: 18px;
+  width: 350px;
 }
 
 .main-footer {
   padding-top: 70px;
-  padding-bottom: 75px;
+  padding-bottom: 40px;
+  background: linear-gradient(to right, #4c3e36, #222222);
 }
 
 .main-footer .container {
@@ -343,14 +441,12 @@ img {
 
 .contacts {
   min-height: 215px;
-  outline: 1px solid yellow;
   width: 300px;
   margin-right: 150px;
 }
 
 .adress {
   min-height: 215px;
-  outline: 1px solid yellow;
   width: 320px;
 }
 
@@ -359,6 +455,8 @@ img {
   color: #ffffff;
   margin: 0;
   padding: 0;
+  width: 275px;
+  margin-bottom: 30px;
 }
 
 .contacts span,
@@ -367,12 +465,54 @@ img {
   color:  #f1cdb3;
   font-size: 20px;
   font-weight: 400;
+  line-height: 23px;
+  margin-bottom: 25px;
+}
+
+.contacts span {
+  display: block;
+  padding-left: 60px;
+  position: relative;
+}
+
+.contacts span::before {
+  content: "";
+  position: absolute;
+  width: 46px;
+  height: 38px;
+  left: 0;
+  top: 50%;
+  margin-top: -19px;
+}
+
+.contacts-email::before {
+  background: url("../img/envelope.svg") no-repeat center;
+}
+
+.contacts-phone::before {
+  background: url("../img/telephone.svg") no-repeat center;
 }
 
 .adress-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 300px;
+}
+
+.adress-item {
+  padding-left: 45px;
+  position: relative;
+}
+
+.adress-item::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 38px;
+  background: url("../img/pin.svg") no-repeat center;
+  left: 0;
+  top: 0;
 }
 
 .wrapper-inner {
@@ -395,11 +535,55 @@ img {
   list-style: none;
 }
 
+.paginator  {
+  display: flex;
+  justify-content: center;
+  margin-top: 62px;
+  margin-bottom: 62px;
+}
+
 .paginator a {
   font-family: "Times New Roman", serif;
   font-size: 20px;
-  line-height: 57px;
   color: #292929;
+  width: 46px;
+  height: 46px;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+
+  border-radius: 50%;
+  border: 2px solid #f1d0b8;
+  margin-right: 17px;
+}
+
+.paginator span {
+  margin-right: 17px;
+  color: #f1d0b8;
+}
+
+.paginator a:hover,
+.paginator a:focus,
+.paginator .link-active {
+  background-color: #f1d0b8;
+}
+
+.footer-inner .container {
+  position: relative;
+}
+
+.footer-inner .container::after {
+  content: "";
+  position: absolute;
+  width: 294px;
+  height: 310px;
+  background: url("../img/footer-dog.png") no-repeat;
+  top: -30px;
+  right: 0;
+}
+
+.popup {
+  display: none;
 }
 
 .popup-pets-title {
