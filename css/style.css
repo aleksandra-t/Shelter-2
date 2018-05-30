@@ -593,7 +593,15 @@ p.donation-card-number::before {
   border-radius: 9px;
   box-shadow: 0px 2px 30.1px 4.9px rgba(13, 13, 13, 0.04);
   margin: 0 auto;
-  position: relative;
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  z-index: 10;
+  background-color: rgb(246, 246, 246);
+}
+
+.popup-show {
+  display: block;
 }
 
 .popup-wrapper {
@@ -626,7 +634,7 @@ p.donation-card-number::before {
   line-height: 34px;
   color: #545454;
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 20px;
 }
 
 .popup-description {
@@ -664,7 +672,7 @@ p.donation-card-number::before {
   left: -12px;
 }
 
-.popup-pets-list  b {
+.popup-pets-list b {
   font-family: "Georgia", serif;
   font-size: 17px;
   line-height: 34px;
@@ -685,6 +693,10 @@ p.donation-card-number::before {
   border-radius: 50%;
   border: 2px solid #f1ceb5;
   cursor: pointer;
+}
+
+.popup-close:hover, .popup-close:focus {
+  background-color: #f1ceb5;
 }
 
 .popup-close::before, .popup-close::after {
